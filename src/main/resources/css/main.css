@@ -1,0 +1,547 @@
+/*
+ * MyPMS JavaFX - Modern Material Design CSS
+ * Based on original Bootstrap-like color scheme
+ * Enhanced with modern shadows, transitions, and effects
+ */
+
+/* ============================
+   ROOT COLOR VARIABLES
+   ============================ */
+.root {
+    /* Primary Colors (Navy Blue Theme) */
+    -fx-primary: #192A56;
+    -fx-primary-hover: #0F1B3A;
+    -fx-primary-light: #2C3E75;
+    -fx-primary-gradient: linear-gradient(to bottom, #2C3E75, #192A56);
+
+    /* Secondary Colors */
+    -fx-secondary: #6C757D;
+    -fx-secondary-hover: #5A6268;
+
+    /* Accent Colors */
+    -fx-success: #28A745;
+    -fx-success-hover: #218838;
+    -fx-danger: #DC3545;
+    -fx-danger-hover: #C82333;
+    -fx-warning: #FFC107;
+    -fx-warning-hover: #E0A800;
+    -fx-info: #17A2B8;
+    -fx-info-hover: #138496;
+    -fx-accent: #6F42C1;
+    -fx-accent-hover: #5A32A3;
+    -fx-cherry: #E83E8C;
+    -fx-cherry-hover: #C92A6E;
+
+    /* Neutral Colors */
+    -fx-white: #FFFFFF;
+    -fx-light-gray: #F8F9FA;
+    -fx-medium-gray: #E9ECEF;
+    -fx-dark-gray: #343A40;
+    -fx-text-dark: #212529;
+    -fx-text-muted: #6C757D;
+
+    /* Shadows */
+    -fx-shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    -fx-shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    -fx-shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    -fx-shadow-xl: 0 12px 24px rgba(0,0,0,0.25);
+
+    /* Border Radius */
+    -fx-radius-sm: 4px;
+    -fx-radius-md: 8px;
+    -fx-radius-lg: 12px;
+    -fx-radius-xl: 16px;
+
+    /* Spacing */
+    -fx-spacing-xs: 4px;
+    -fx-spacing-sm: 8px;
+    -fx-spacing-md: 16px;
+    -fx-spacing-lg: 24px;
+    -fx-spacing-xl: 32px;
+
+    /* Fonts */
+    -fx-font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+    -fx-font-size-base: 14px;
+    -fx-font-size-sm: 12px;
+    -fx-font-size-lg: 16px;
+    -fx-font-size-xl: 20px;
+    -fx-font-size-xxl: 24px;
+}
+
+/* ============================
+   BACKGROUND & BASE
+   ============================ */
+.root {
+    -fx-background-color: -fx-light-gray;
+}
+
+/* ============================
+   BUTTONS
+   ============================ */
+.button {
+    -fx-background-radius: -fx-radius-md;
+    -fx-cursor: hand;
+    -fx-font-family: -fx-font-family;
+    -fx-font-size: -fx-font-size-base;
+    -fx-font-weight: 600;
+    -fx-padding: 12 24 12 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 4);
+    -fx-translate-y: -2;
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+    -fx-translate-y: 0;
+}
+
+/* Button Primary (Navy Blue) */
+.button-primary {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.button-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #3A4E8D, #1F2D4A);
+}
+
+.button-primary:pressed {
+    -fx-background-color: -fx-primary-hover;
+}
+
+/* Button Success */
+.button-success {
+    -fx-background-color: linear-gradient(to bottom, #34CE57, #28A745);
+    -fx-text-fill: white;
+}
+
+.button-success:hover {
+    -fx-background-color: linear-gradient(to bottom, #28A745, #1E7E34);
+}
+
+/* Button Danger */
+.button-danger {
+    -fx-background-color: linear-gradient(to bottom, #E74C5C, #DC3545);
+    -fx-text-fill: white;
+}
+
+.button-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #DC3545, #BD2130);
+}
+
+/* Button Warning */
+.button-warning {
+    -fx-background-color: linear-gradient(to bottom, #FFD54F, #FFC107);
+    -fx-text-fill: -fx-text-dark;
+}
+
+.button-warning:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFC107, #D39E00);
+}
+
+/* Button Info */
+.button-info {
+    -fx-background-color: linear-gradient(to bottom, #1FB3C9, #17A2B8);
+    -fx-text-fill: white;
+}
+
+/* Button Secondary */
+.button-secondary {
+    -fx-background-color: linear-gradient(to bottom, #7C8591, #6C757D);
+    -fx-text-fill: white;
+}
+
+/* Button sizes */
+.button-sm {
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: -fx-font-size-sm;
+}
+
+.button-lg {
+    -fx-padding: 16 32 16 32;
+    -fx-font-size: -fx-font-size-lg;
+}
+
+.button-xl {
+    -fx-padding: 20 40 20 40;
+    -fx-font-size: -fx-font-size-xl;
+}
+
+/* ============================
+   TEXT FIELDS
+   ============================ */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-md;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-md;
+    -fx-border-width: 2px;
+    -fx-padding: 10 12 10 12;
+    -fx-font-family: -fx-font-family;
+    -fx-font-size: -fx-font-size-base;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, rgba(25,42,86,0.2), 4, 0, 0, 2);
+}
+
+/* ============================
+   COMBO BOX
+   ============================ */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-md;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-md;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
+
+.combo-box:focused {
+    -fx-border-color: -fx-primary;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-md;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 4);
+}
+
+.combo-box-popup .list-cell {
+    -fx-padding: 8 12 8 12;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: -fx-light-gray;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+
+/* ============================
+   TABLE VIEW
+   ============================ */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-lg;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-lg;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-primary-gradient;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: -fx-font-size-base;
+    -fx-padding: 12 8 12 8;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8 8 8 8;
+    -fx-border-color: transparent transparent -fx-medium-gray transparent;
+    -fx-font-size: -fx-font-size-base;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FAFBFC;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #E8F4FF;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-primary-light;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* ============================
+   LABELS
+   ============================ */
+.label {
+    -fx-font-family: -fx-font-family;
+    -fx-font-size: -fx-font-size-base;
+    -fx-text-fill: -fx-text-dark;
+}
+
+.label-title {
+    -fx-font-size: -fx-font-size-xxl;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+}
+
+.label-header {
+    -fx-font-size: -fx-font-size-xl;
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-primary;
+}
+
+.label-muted {
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: -fx-font-size-sm;
+}
+
+/* ============================
+   PANELS & CONTAINERS
+   ============================ */
+.panel {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-lg;
+    -fx-padding: -fx-spacing-lg;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+.panel-header {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-background-radius: -fx-radius-lg -fx-radius-lg 0 0;
+    -fx-padding: -fx-spacing-md;
+}
+
+.panel-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: -fx-font-size-lg;
+}
+
+.panel-body {
+    -fx-background-color: white;
+    -fx-padding: -fx-spacing-lg;
+}
+
+/* ============================
+   SEARCH PANEL
+   ============================ */
+.search-panel {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-lg;
+    -fx-padding: -fx-spacing-md;
+    -fx-spacing: -fx-spacing-md;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+}
+
+/* ============================
+   MENU BAR
+   ============================ */
+.menu-bar {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-padding: 0;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-size: -fx-font-size-base;
+}
+
+.menu-bar .menu:hover {
+    -fx-background-color: -fx-primary-light;
+}
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-md;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 4);
+}
+
+.menu-item {
+    -fx-padding: 8 16 8 16;
+}
+
+.menu-item:hover {
+    -fx-background-color: -fx-light-gray;
+}
+
+/* ============================
+   SCROLL PANE
+   ============================ */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-secondary;
+    -fx-background-radius: 8px;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: -fx-light-gray;
+    -fx-background-radius: 8px;
+}
+
+/* ============================
+   DATE PICKER
+   ============================ */
+.date-picker {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-md;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-md;
+    -fx-border-width: 2px;
+}
+
+.date-picker:focused {
+    -fx-border-color: -fx-primary;
+}
+
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-lg;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0, 0, 4);
+}
+
+/* ============================
+   DIALOG & STAGE
+   ============================ */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-radius: -fx-radius-lg;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-background-radius: -fx-radius-lg -fx-radius-lg 0 0;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: -fx-font-size-xl;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content {
+    -fx-padding: -fx-spacing-lg;
+}
+
+/* ============================
+   PROGRESS BAR
+   ============================ */
+.progress-bar {
+    -fx-background-radius: -fx-radius-xl;
+}
+
+.progress-bar .track {
+    -fx-background-color: -fx-medium-gray;
+    -fx-background-radius: -fx-radius-xl;
+}
+
+.progress-bar .bar {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-background-radius: -fx-radius-xl;
+}
+
+/* ============================
+   TAB PANE
+   ============================ */
+.tab-pane {
+    -fx-background-color: white;
+    -fx-border-color: -fx-medium-gray;
+    -fx-border-radius: -fx-radius-lg;
+    -fx-background-radius: -fx-radius-lg;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: -fx-light-gray;
+    -fx-background-radius: -fx-radius-lg -fx-radius-lg 0 0;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: -fx-radius-md -fx-radius-md 0 0;
+    -fx-padding: 12 20 12 20;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-text-muted;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: -fx-primary;
+}
+
+/* ============================
+   TOOLTIP
+   ============================ */
+.tooltip {
+    -fx-background-color: -fx-dark-gray;
+    -fx-background-radius: -fx-radius-sm;
+    -fx-text-fill: white;
+    -fx-font-size: -fx-font-size-sm;
+    -fx-padding: 6 10 6 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { -fx-translate-y: -20; -fx-opacity: 0; }
+    to { -fx-translate-y: 0; -fx-opacity: 1; }
+}
+
+/* ============================
+   UTILITY CLASSES
+   ============================ */
+.spacing-xs { -fx-spacing: -fx-spacing-xs; }
+.spacing-sm { -fx-spacing: -fx-spacing-sm; }
+.spacing-md { -fx-spacing: -fx-spacing-md; }
+.spacing-lg { -fx-spacing: -fx-spacing-lg; }
+.spacing-xl { -fx-spacing: -fx-spacing-xl; }
+
+.padding-xs { -fx-padding: -fx-spacing-xs; }
+.padding-sm { -fx-padding: -fx-spacing-sm; }
+.padding-md { -fx-padding: -fx-spacing-md; }
+.padding-lg { -fx-padding: -fx-spacing-lg; }
+.padding-xl { -fx-padding: -fx-spacing-xl; }
+
+.text-center { -fx-alignment: center; }
+.text-left { -fx-alignment: center-left; }
+.text-right { -fx-alignment: center-right; }
+
+.rounded-sm { -fx-background-radius: -fx-radius-sm; }
+.rounded-md { -fx-background-radius: -fx-radius-md; }
+.rounded-lg { -fx-background-radius: -fx-radius-lg; }
+.rounded-xl { -fx-background-radius: -fx-radius-xl; }
